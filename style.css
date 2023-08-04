@@ -1,0 +1,35 @@
+
+.background {
+    background-color: rgb(212, 88, 212);
+}
+#cv-template {
+    display : none;
+}
+
+.myimg {
+    border-radius: 100%;
+    width:40%;
+    height : 20%;
+}
+
+        /* CSS for Print Styling */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+
+            #cv-template, #cv-template * {
+                visibility: visible;
+            }
+
+            #cv-template {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: 0;
+                padding: 0;
+                min-height: 100%;
+            }
+        }

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container" id="cv-form">
+        <h1 class="text-center my-4">Resume Generator</h1>
+        <p class="text-center my-4">live with josh</p>
+
+        <div class="row">
+            <div class="col-md-6">
+
+                <!-- personal information -->
+                
+                <h3>personal information</h3>
+                <div class="form-group">    <!--placeholder for box text inner-->
+                    <label for="nameField">Name</label>
+                    <input type="text" id="nameField" placeholder="Enter here" class="form-control">
+                </div>
+                <!-- contact -->
+                
+                <div class="form-group mt-2">
+                    <label for="contactField">Contact</label>
+                    <input type="text" id="contactField" placeholder="Enter here" class="form-control">
+                </div>
+
+                <!-- adress -->
+                <div class="form-group mt-2">
+                    <label for="addressField">Address</label> <!-- textarea give you big space*/ -->
+                    <textarea type="text" id="addressField" placeholder="Enter here" row="23"
+                        class="form-control"></textarea>
+                </div>
+
+              <div class="form-group mt-4">
+                <label for="imgField">Chose picture</label>
+                <input id="imgField" type="file" class="form-controls">
+              </div>
+
+                <!-- social links -->
+                
+                <p clas="text-secondary my-3s">Important links</p> <!--my=margin y-->
+
+                <div class="form-group mt-2">
+                    <label for="fbField">Facebook</label>
+                    <input type="text" id="fbField" placeholder="Enter here" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="tweetField">twitter</label>
+                    <input type="text" id="tweetField" placeholder="Enter here" class="form-control">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="linkdField">Linkedin</label>
+                    <input type="text" id="linkdField" placeholder="Enter here" class="form-control">
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+                <h3>Professional information </h3>
+
+                <div class="form-group mt-2">
+                    <label for="">objective</label>
+                    <textarea type="text" id="objectiveField" placeholder="Enter here" row="4" class="form-control"></textarea>
+                </div>
+
+
+                <div class="form-group mt-1" id="we">
+                    <label for="">Work Experience</label> <!-- textarea give you big space*/ -->
+                    <textarea type="text" placeholder="Enter here" row="4" class="form-control weField"></textarea>
+                  <!-- add class due to add many experience -->
+
+                    <div class="container text-center" id="addNewBtn">
+                        <button onclick="addNewEbtn()" class="btn btn-primary my-4">Add</button>
+                    </div>
+                </div>
+
+
+                <div class="form-group mt-1" id="aq">
+                    <label for="">Academic Qualification</label> <!-- textarea give you big space*/ -->
+                    <textarea type="text" placeholder="Enter here" row="4" class="form-control aqField"></textarea>
+
+                    <div class="container text-center" id="addNewBtn2">
+                        <button onclick="addNewbox()" class="btn btn-primary my-4">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container text-center mt-2" id="CV">
+                <button onclick="generateCV()" class="btn btn-primary">Generate CV</button>
+            </div>
+        
+        </div>
+    </div>
+    </div>
+
+        <!-- CV template -->
+    
+        <div class="container" id="cv-template">
+    <div class="row">
+        <!--first coloumn bio & picture-->
+        <div class="col-md-4 background">  
+            <img src="https://m.media-amazon.com/images/M/MV5BOTBhMTI1NDQtYmU4Mi00MjYyLTk5MjEtZjllMDkxOWY3ZGRhXkEyXkFqcGdeQXVyNzI1NzMxNzM@._V1_.jpg" alt="" class="img-fluid myimg" id="imgTemplate">
+        
+        <div class="container background">
+            <p id="nameT">Jhonny Deep</p>
+            <p id="contactT">+9223234234</p>
+            <p id="addressT">Gulshan e Iqbal karachi Sindh block ##3</p>
+        
+        <hr>
+        <p><a id="fbT" href="#1">https://www.facebook.com/aamir</a></p>
+        <p><a id="linkedinT" href="#2">https://www.linkedin.com/aamir23</a></p>
+         <p><a id="twitterT" href="#3">https://www.twitter.com/aamir</a></p>
+        </div>
+        </div>
+         <div class="col-md-8">    
+            <!-- second column  -->
+            <h1 id="nameT2" class="text-center">Jhonny Deep</h1>
+
+        <div class="card my-5">
+            <div class="card-header background">
+                <h3>Objective</h3>
+            </div>
+            <div class="car-body my-3">
+                <p id="objectiveT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse soluta dignissimos non, vero incidunt repudiandae vel ex corrupti, totam magni perspiciatis, quae iste ipsa accusantium accusamus quisquam adipisci. Atque sed harum illum reiciendis! Placeat pariatur atque, nulla provident possimus quisquam iusto officiis consequatur maiores culpa numquam quae repudiandae! Cumque, quis?</p>
+            </div>
+        </div>    
+         <!-- work Experience -->
+          <div class="card my-3">
+            <div class="card-header background">
+                <h3>Work Experience</h3>
+            </div>
+            <div class="car-body my-3">
+                <ul id="weT">
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, pariatur!</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, pariatur!</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, pariatur!</li>
+                </ul>
+            </div>
+        </div>
+<!-- academic qualification -->
+        <div class="card my-3">
+            <div class="card-header background">
+                <h3>Academic Qualification</h3>
+            </div>
+            <div class="car-body my-3">
+                <ul id="aqT">
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, pariatur!</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, pariatur!</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, pariatur!</li>
+                </ul>
+            </div>
+        </div>
+
+      <div class="container text-center mt-3 background">
+      <button onclick="printCV()" class="btn"> Print CV</button>
+      </div>
+
+        </div>       
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
