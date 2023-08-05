@@ -10,65 +10,66 @@
 
 <body>
     <div class="container" id="cv-form">
-        <h1 class="text-center my-4">Resume Generator</h1>
-        <p class="text-center my-4">live with josh</p>
+        <div id="hero">
+            <h1 class="">Resume Generator</h1>
+            <p class="sub-heading">Generate professional looking resumes in seconds</p>
+        </div>
 
         <div class="row">
             <div class="col-md-6">
 
                 <!-- personal information -->
                 
-                <h3>personal information</h3>
+                <h2>Personal Information</h2>
                 <div class="form-group">    <!--placeholder for box text inner-->
                     <label for="nameField">Name</label>
-                    <input type="text" id="nameField" placeholder="Enter here" class="form-control">
+                    <input type="text" id="nameField" placeholder="Full Name" class="form-control" required minlength="3">
                 </div>
                 <!-- contact -->
                 
                 <div class="form-group mt-2">
                     <label for="contactField">Contact</label>
-                    <input type="text" id="contactField" placeholder="Enter here" class="form-control">
+                    <input type="number" id="contactField" placeholder="Personal contact" class="form-control" required minlength="11">
                 </div>
 
                 <!-- adress -->
                 <div class="form-group mt-2">
                     <label for="addressField">Address</label> <!-- textarea give you big space*/ -->
-                    <textarea type="text" id="addressField" placeholder="Enter here" row="23"
-                        class="form-control"></textarea>
+                    <textarea type="text" id="addressField" placeholder="Full address" row="23" class="form-control"></textarea>
                 </div>
 
               <div class="form-group mt-4">
-                <label for="imgField">Chose picture</label>
-                <input id="imgField" type="file" class="form-controls">
+                <label for="imgField">Profile Picture</label>
+                <input id="imgField" type="file" class="form-controls" required>
               </div>
 
                 <!-- social links -->
                 
-                <p clas="text-secondary my-3s">Important links</p> <!--my=margin y-->
+                <h2 clas="text-secondary my-3s">Social links</h2> <!--my=margin y-->
 
                 <div class="form-group mt-2">
                     <label for="fbField">Facebook</label>
-                    <input type="text" id="fbField" placeholder="Enter here" class="form-control">
+                    <input type="text" id="fbField" placeholder="www.facebook.com/username" class="form-control">
                 </div>
 
                 <div class="form-group mt-2">
                     <label for="tweetField">twitter</label>
-                    <input type="text" id="tweetField" placeholder="Enter here" class="form-control">
+                    <input type="text" id="tweetField" placeholder="www.twitter.com/@username" class="form-control">
                 </div>
 
                 <div class="form-group mt-2">
                     <label for="linkdField">Linkedin</label>
-                    <input type="text" id="linkdField" placeholder="Enter here" class="form-control">
+                    <input type="text" id="linkdField" placeholder="www.linkedin.com/in/username" class="form-control">
                 </div>
             </div>
 
 
             <div class="col-md-6">
-                <h3>Professional information </h3>
+                <h2>Professional information </h2>
 
                 <div class="form-group mt-2">
-                    <label for="">objective</label>
-                    <textarea type="text" id="objectiveField" placeholder="Enter here" row="4" class="form-control"></textarea>
+                    <label for="">Objective</label>
+                    <textarea type="text" id="objectiveField" placeholder="Your career objectives" row="4" class="form-control"></textarea>
                 </div>
 
 
@@ -78,7 +79,7 @@
                   <!-- add class due to add many experience -->
 
                     <div class="container text-center" id="addNewBtn">
-                        <button onclick="addNewEbtn()" class="btn btn-primary my-4">Add</button>
+                        <button onclick="addNewEbtn()" class="btn btn-outline-primary my-4">Add</button>
                     </div>
                 </div>
 
@@ -88,11 +89,11 @@
                     <textarea type="text" placeholder="Enter here" row="4" class="form-control aqField"></textarea>
 
                     <div class="container text-center" id="addNewBtn2">
-                        <button onclick="addNewbox()" class="btn btn-primary my-4">Add</button>
+                        <button onclick="addNewbox()" class="btn btn-outline-primary my-4">Add</button>
                     </div>
                 </div>
             </div>
-            <div class="container text-center mt-2" id="CV">
+            <div class="container text-center  my-5" id="CV">
                 <button onclick="generateCV()" class="btn btn-primary">Generate CV</button>
             </div>
         
